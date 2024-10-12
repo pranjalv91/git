@@ -1,0 +1,34 @@
+Configure useranme and email for using git
+git config --global user.name "pranjalv91"
+git config --global user.email "verlekar.pranjal@gmail.com"
+
+Go to the directory where git needs to be initialized
+cd "C:\Users\Pranjal Verlekar\Documents\VisualStudioCode\PythonProjects"
+
+Command to initialize git in a working directory
+git init
+
+Add remote repository
+git remote add origin https://github.com/username/repository.git
+git remote add origin https://github.com/pranjalv91/python.git
+
+Verify the remote repository
+git remote -v
+
+Rename local branch from master to main
+git branch -m master main
+
+Remove any connections from origin repository
+git fetch -p origin
+
+Create an upstream from main bracnh in local to master branch in remote repository "origin"
+git branch -u origin/master main
+
+Add changes to the staging area
+git add .
+
+Commit the changes to local repository with a commit message
+git commit -m "First commit from local to python repository"
+
+Push changes from local branch 'main' to remote repository 'origin' 
+git push -f origin main
