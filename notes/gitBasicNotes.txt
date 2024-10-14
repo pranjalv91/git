@@ -1,0 +1,79 @@
+Git
+
+What is Git
+- Version control system
+- Allows user to keep track of multiple versions of the same file
+- User can switch to a different version of the file at a given time
+
+Terms
+Author
+- Specifies who made the change (author)
+- What was the change that was made
+- When the change was made
+
+Hash
+- Special commit ID that specifies the version of the change that was made
+- Unique ID that will allow user to trace the spcific change
+
+.git
+- Folder which contains information regarding git repository
+- Information of history of commits and hashes
+
+HEAD
+- Points to the latest version
+- Lets say we have 50 versions for a particular file. In this case, HEAD will point to the latest file
+
+
+Stages/Commands
+
+init
+- Initialize a empty working folder for git repository
+- There is a folder called devops-project-batch-8 which is where we will create files for our project
+- To initialize this folder to be used in git use the command
+	git init
+
+Untracked
+- When the files are created and only part of the file system they are untracked
+- For eg) Let's assume there are 2 lovers with text files: jack.txt and jill.txt
+- At this stage, they are not seeing each other so they are untracked ie.) they are free to see someone else at this point
+- If jill elopes with another lover or if jill dies (jill.txt is deleted), then it is not posisble to track the jill's status since its untracked
+
+
+Staged
+- When file are added to the staged area using git add command
+- For eg.) The 2 lovers jack.txt and jill.txt decide to engaged. In order to get engaged they climb on a stage
+- To add themselves on the stage, they use the command 
+	git add . (The dot . refers to all files in a project)
+	git add jack.txt jill.txt (Only these 2 files are added)
+- For some reason, if jill decides to break the engagmement and unstage herself, this can be done using the below command
+	git rm --cached jill.txt
+- This stage area is also called index
+   
+
+Tracked
+- When files are committed into the local repository they are in tracked stage
+- Now the files are a part of the git version control system
+- This is achieved using git commit -m "<Commit Message>"
+- The '-m' flag is used for entering a relevant message while committing the files
+- For eg.) jack and jill decide to marry. In other words they decide to commit themselves to the git ecosystem
+- As a part of the commitment, Jack decides to get the stars and moon for Jill
+- The whole commmitment can be summed up using the command
+	git commit -m "Jack will get stars and moon for Jill to get married"
+- A more professional message would be
+	git commit -m "feat: added jack and jill"
+- Note: All the files that appear green in the staged area will be committed.
+
+Status
+- Shows a list of files which are tracked/untracked by git
+- For eg.) jack and jill can check status of their relationship (committed, open, complicated) by using the command
+				git status
+- Output would return the following
+
+
+<Insert Image>
+
+
+
+
+
+
